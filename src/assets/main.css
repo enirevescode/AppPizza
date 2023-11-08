@@ -1,35 +1,39 @@
 @import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+body {
+  margin: 0px;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Roboto", sans-serif;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+img {
+  width: 90%;
+  padding: 15px;
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.product-description {
+  width: 47%;
+}
+.product-image {
+  width: 52%;
+}
+.product-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px 0px 40px 40px;
+  width: 80%;
+}
+span.price {
+  color: #c10a28;
+  font-family: "Source Sans Pro";
+  font-size: 24px;
+  font-weight: 400;
 }
