@@ -1,10 +1,10 @@
 <script setup>
 import {ref} from 'vue'
 const Products= ref([
-    
-       { name: "Pizza Royale",
-        price: 12}
-    
+       { 
+        name: "Pizza Royale",
+        price: 12
+      }
 ])
 </script>
 <template>
@@ -12,6 +12,7 @@ const Products= ref([
     <div class="product-section">
       <div class="product-image">
         <img src="" />
+        <h2>ha</h2>
       </div>
       <div class="product-description">
         <h1>we love </h1>
