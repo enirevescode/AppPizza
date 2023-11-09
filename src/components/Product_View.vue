@@ -1,22 +1,30 @@
 <script setup>
 import {ref} from 'vue'
-const Products= ref([
+const products = ref([
        { 
-        name: "Pizza Royale",
-        price: 12
+        "name": "Pizza Royale",
+        "price": 12,
+        "image": "src/assets/img/pizza2.jpg",
+        "sale": true,
+        "notAvailable": true,
       }
 ])
 </script>
 <template>
-  <h1>et voila</h1>
-    <div class="product-section">
+    <div class="product-section" v-for="product in products">
       <div class="product-image">
-        <img src="" />
-        <h2>ha</h2>
+        <img :src= "product.image"/>
       </div>
       <div class="product-description">
-        <h1>we love </h1>
-        <span class="price">{{ price }}</span>
+        <h1>{{ product.name }}</h1>
+        <p v-show="product.notAvailable">Momentanément indisponible !</p>
+        <p v-if="product.sale">
+          <span class="sale">{{ product.price }}€</span>
+          <span class="new-price">{{ product.price - 5 }}€</span>
+        </p>
+        <p v-else>
+        <span class="price">{{ product.price }} €</span>
+        </p>
       </div>
     </div>
 </template>
